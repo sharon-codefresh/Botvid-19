@@ -61,7 +61,7 @@ try:
         EC.presence_of_element_located((By.XPATH, start))
     )
 finally:
-    driver.quit()
+    browser.quit()
 
 time.sleep(2)
 log_browser(browser)
