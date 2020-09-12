@@ -55,9 +55,9 @@ start = '//*[@id="main-content"]/section[1]/div/health-declaration/div/div[1]/di
 time.sleep(2)
 log_browser(browser)
 
-browser.find_element_by_xpath(start).click()
+#browser.find_element_by_xpath(start).click()
 try:
-    element = WebDriverWait(browser, 10).until(
+    element = WebDriverWait(browser, 20).until(
         EC.presence_of_element_located((By.XPATH, start))
     )
 finally:
