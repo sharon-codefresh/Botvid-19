@@ -52,7 +52,8 @@ logger.info("Starting process")
 browser = webdriver.Chrome(executable_path="/opt/chromedriver-85.0.4183.87/chromedriver", options=option)
 # browser.get("https://parents.education.gov.il/prhnet/parents/rights-obligations-regulations/health-statement-kindergarden")
 browser.get("https://www.ynet.co.il/home/0,7340,L-8,00.html")
-start = '//*[@id="main-content"]/section[1]/div/health-declaration/div/div[1]/div[4]/div/div/div/input'
+# start = '//*[@id="main-content"]/section[1]/div/health-declaration/div/div[1]/div[4]/div/div/div/input'
+start = '//*[@id="ry5P783ao54w"]/img'
 time.sleep(2)
 log_browser(browser)
 
