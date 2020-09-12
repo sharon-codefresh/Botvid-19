@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from datetime import date
 from datetime import time
@@ -53,6 +56,13 @@ time.sleep(2)
 log_browser(browser)
 
 browser.find_element_by_xpath(start).click()
+try:
+    element = WebDriverWait(browser, 10).until(
+        EC.presence_of_element_located((By.XPATH, start))
+    )
+finally:
+    driver.quit()
+
 time.sleep(2)
 log_browser(browser)
 
